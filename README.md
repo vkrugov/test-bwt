@@ -31,9 +31,9 @@ App\Services\CountryService однако обращаемся мы не к не�
 
  * composer install
  * sudo chmod -R 777 storage/
+ * create a file ".env"
  * php artisan key:generate
  * php artisan migrate
- * create a file ".env"
  * create Database in Mysql and connect it in .env
 
 ## Examples of work
