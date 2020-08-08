@@ -17,7 +17,6 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends Model
 {
     protected $table = 'company';
-    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -41,6 +40,6 @@ class Company extends Model
      */
     public function users()
     {
-        return $this->belongsToMany('App\User', 'company_to_user')->withPivot('connected_at');
+        return $this->belongsToMany('App\User', 'company_user')->using('App\CompanyUser')->withPivot('connected_at');
     }
 }

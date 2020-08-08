@@ -36,4 +36,13 @@ class CountryController extends Controller
 
         return $this->asJson(CountryService::getCompanies($country));
     }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getUsers(Request $request)
+    {
+        return $this->asJson(Country::firstWhere(['name' => $request->name])->users);
+    }
 }

@@ -37,8 +37,8 @@ class DataBaseInit extends Migration
             $table->foreign('country_id')->references('id')->on('country');
         });
 
-        //init company_to_user
-        Schema::create('company_to_user', function (Blueprint $table) {
+        //init company_user
+        Schema::create('company_user', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('company_id')->unsigned();
@@ -56,7 +56,7 @@ class DataBaseInit extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('company_to_user');
+        Schema::dropIfExists('company_user');
         Schema::dropIfExists('user');
         Schema::dropIfExists('company');
         Schema::dropIfExists('country');

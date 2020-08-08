@@ -23,7 +23,6 @@ class User extends Authenticatable
     use Notifiable;
 
     protected $table = 'user';
-    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -48,6 +47,6 @@ class User extends Authenticatable
      */
     public function companies()
     {
-        return $this->belongsToMany('App\Company', 'company_to_user')->withPivot('connected_at');
+        return $this->belongsToMany('App\Company', 'company_user')->using('App\CompanyUser')->withPivot('connected_at');
     }
 }

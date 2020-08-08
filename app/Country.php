@@ -11,11 +11,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  *
  * @property Company[] $companies
+ * @property User[] $users
  */
 class Country extends Model
 {
     protected $table = 'country';
-    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -32,5 +32,15 @@ class Country extends Model
     public function companies()
     {
         return $this->hasMany('App\Company')->with('users');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
+     */
+    public function users()
+    {
+        return $this->hasManyThrough('App\CompanyUser', 'App\Company')
+            ->leftJoin('user', 'company_user.user_id', '=', 'user.id')
+            ->select(['user.email', 'company.name', 'company_user.connected_at']);
     }
 }

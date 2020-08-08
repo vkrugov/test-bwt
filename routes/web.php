@@ -17,3 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group([
+    'prefix' => 'country'
+], function () {
+    Route::get('get-companies', 'CountryController@getCompanies');
+    Route::get('get-users', 'CountryController@getUsers');
+    Route::get('get-companies-short', 'CountryController@getCompaniesShort');
+});
