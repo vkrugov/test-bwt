@@ -36,7 +36,7 @@ App\Services\CountryService однако обращаемся мы не к не�
  * php artisan migrate
  * create Database in Mysql and connect it in .env
 
-## Examples of work
+## Examples of requests
 
 Params in row (JSON):
 ```
@@ -44,6 +44,29 @@ Params in row (JSON):
     "name": "Canada"
 }
 ``` 
+/api/country/get-users
+```
+[
+    {
+        "email": "test1@example.com",
+        "name": "Google",
+        "connected_at": "2020-08-08 18:31:20",
+        "laravel_through_key": 1
+    },
+    {
+        "email": "test2@example.com",
+        "name": "Google",
+        "connected_at": "2020-08-08 18:31:20",
+        "laravel_through_key": 1
+    },
+    {
+        "email": "test2@example.com",
+        "name": "Apple",
+        "connected_at": "2020-08-08 18:31:20",
+        "laravel_through_key": 1
+    }
+]
+```
 
  /api/country/get-companies 
 ```

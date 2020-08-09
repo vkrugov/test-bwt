@@ -12,9 +12,19 @@ class CountryController extends Controller
     {
         $this->middleware('checkCountry', [
             'only' => [
-                'getByCountryShort', 'getByCountry'
+                'getByCountryShort', 'getByCountry', 'getUsers'
             ]
         ]);
+    }
+
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getUsers(Request $request)
+    {
+        return $this->asJson(Country::firstWhere(['name' => $request->name])->users);
     }
 
     /**
@@ -35,14 +45,5 @@ class CountryController extends Controller
         $country = Country::firstWhere(['name' => $request->name]);
 
         return $this->asJson(CountryService::getCompanies($country));
-    }
-
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function getUsers(Request $request)
-    {
-        return $this->asJson(Country::firstWhere(['name' => $request->name])->users);
     }
 }

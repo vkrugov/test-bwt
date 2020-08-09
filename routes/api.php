@@ -19,4 +19,5 @@ Route::group([
 ], function () {
     Route::get('get-companies', 'CountryController@getCompanies');
     Route::get('get-companies-short', 'CountryController@getCompaniesShort');
+    Route::get('get-users', 'CountryController@getUsers');
 });
