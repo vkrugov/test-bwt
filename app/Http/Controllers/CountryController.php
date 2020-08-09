@@ -31,7 +31,7 @@ class CountryController extends Controller
      */
     public function getUsers(Request $request)
     {
-        return $this->asJson(Country::firstWhere(['name' => $request->name])->users);
+        return $this->asJson(Country::firstWhere(['name' => $request->country])->users);
     }
 
     /**
@@ -40,7 +40,7 @@ class CountryController extends Controller
      */
     public function getCompanies(Request $request)
     {
-        return $this->asJson(Country::firstWhere(['name' => $request->name])->companies);
+        return $this->asJson(Country::firstWhere(['name' => $request->country])->companies);
     }
 
     /**
@@ -49,7 +49,7 @@ class CountryController extends Controller
      */
     public function getCompaniesShort(Request $request)
     {
-        $country = Country::firstWhere(['name' => $request->name]);
+        $country = Country::firstWhere(['name' => $request->country]);
 
         return $this->asJson(CountryService::getCompaniesByCountry($country));
     }

@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="fix readme. fix routes. fix controller">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Company.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CompanyUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CompanyUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Country.php" afterDir="false" />
+    <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/CountryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/CountryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CountryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CountryService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_135859_test_data_init.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_135859_test_data_init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckCountry.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckCountry.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596977754888</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix code style">
+      <created>1596979753875</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596979753875</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +195,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix readme. fix routes. fix controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix readme. fix routes. fix controller" />
+    <MESSAGE value="fix code style" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix code style" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="180" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596891035839">
@@ -205,10 +207,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="264" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1596978434692" />
-    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2" timestamp="1596979505387">
+    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2" timestamp="1596979753828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596979505387" />
+    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596979753828" />
     <state x="100" y="99" width="1720" height="840" key="DiffContextDialog" timestamp="1596977482645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -281,10 +283,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="21" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596979607026" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1596977756163">
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1596979755318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596977756163" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596979755318" />
     <state x="849" y="409" width="312" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596891191727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -305,9 +307,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="49" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1596979335338" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1596979513066">
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1596979949962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596979513066" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596979949962" />
   </component>
 </project>

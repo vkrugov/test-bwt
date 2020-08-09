@@ -31,17 +31,17 @@ App\Services\CountryService однако обращаемся мы не к не�
 
  * composer install
  * sudo chmod -R 777 storage/
- * create a file ".env"
+ * create a file ".env" and copy info from ".env.example"
+ * create Database in Mysql and connect it in .env
  * php artisan key:generate
  * php artisan migrate
- * create Database in Mysql and connect it in .env
 
 ## Examples of requests
 
 Params in row (JSON):
 ```
 {
-    "name": "Canada"
+    "country": "Canada"
 }
 ``` 
 /api/country/get-users

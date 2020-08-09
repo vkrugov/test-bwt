@@ -17,7 +17,7 @@ class CheckCountry
      */
     public function handle($request, Closure $next)
     {
-        $country = Country::firstWhere(['name' => $request->name]);
+        $country = Country::firstWhere(['name' => $request->country]);
 
         if (!$country) {
             throw new UnprocessableEntityHttpException('Country not found');
