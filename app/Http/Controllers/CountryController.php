@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 use App\Country;
 use CountryService;
 
+/**
+ * Class CountryController
+ * @package App\Http\Controllers
+ */
 class CountryController extends Controller
 {
+    /**
+     * CountryController constructor.
+     */
     public function __construct()
     {
         $this->middleware('checkCountry', [
@@ -44,6 +51,6 @@ class CountryController extends Controller
     {
         $country = Country::firstWhere(['name' => $request->name]);
 
-        return $this->asJson(CountryService::getCompanies($country));
+        return $this->asJson(CountryService::getCompaniesByCountry($country));
     }
 }

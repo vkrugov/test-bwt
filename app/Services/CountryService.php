@@ -2,8 +2,9 @@
 
 namespace App\Services;
 
-use App\Company;
 use App\Country;
+use App\User;
+use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Class CountryService
@@ -17,34 +18,64 @@ class CountryService
     public $country;
 
     /**
-     * @param $country
+     * @var array
+     */
+    protected $companies = [];
+
+    /**
+     * @param Country $country
      * @return array
      */
-    public function getCompanies($country):array
+    public function getCompaniesByCountry(Country $country): array
     {
-        $this->setCountry($country);
-
-        $result = [];
-
-        foreach ($this->country->companies as $key => $company) {
-            $result[$key] = [
-                'Company' => $company->name,
-                'Users' => $this->getFormatCompanyUsers($company)
-            ];
-        }
-
-        return $result;
+        return $this->setCountry($country)->setCompanies()->getCompanies();
     }
 
     /**
-     * @param Company $company
      * @return array
      */
-    private function getFormatCompanyUsers(Company $company): array
+    public function getCompanies(): array
+    {
+        return $this->companies;
+    }
+
+    /**
+     * @param Country $country
+     * @return $this
+     */
+    public function setCountry(Country $country): CountryService
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function setCompanies(): CountryService
+    {
+        if(!empty($this->country)) {
+            foreach ($this->country->companies as $key => $company) {
+                $this->companies[$key] = [
+                    'Company' => $company->name,
+                    'Users' => $this->getFormatCompanyUsers($company->users)
+                ];
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param User[] $users
+     * @return array
+     */
+    public function getFormatCompanyUsers(Collection $users): array
     {
         $result = [];
 
-        foreach ($company->users as $key => $user) {
+        foreach ($users as $key => $user) {
             $result[$key] = [
                 'User Name' => $user->name,
                 'User Email' => $user->email,
@@ -53,13 +84,5 @@ class CountryService
         }
 
         return $result;
-    }
-
-    /**
-     * @param $country
-     */
-    private function setCountry($country): void
-    {
-        $this->country = $country;
     }
 }

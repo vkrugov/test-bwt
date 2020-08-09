@@ -12,7 +12,7 @@ use Illuminate\Support\ServiceProvider;
 class CountryServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
+     * Register CountryService.
      *
      * @return void
      */

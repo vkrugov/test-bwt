@@ -15,6 +15,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Country extends Model
 {
+    /**
+     * @var string
+     */
     protected $table = 'country';
 
     /**

@@ -22,6 +22,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    /**
+     * @var string
+     */
     protected $table = 'user';
 
     /**
