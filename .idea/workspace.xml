@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckCountry.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckCountry.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596979753875</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change name to country">
+      <created>1596980209173</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596980209173</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +201,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix readme. fix routes. fix controller" />
     <MESSAGE value="fix code style" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix code style" />
+    <MESSAGE value="change name to country" />
+    <option name="LAST_COMMIT_MESSAGE" value="change name to country" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="180" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596891035839">
@@ -207,10 +213,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="264" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1596978434692" />
-    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2" timestamp="1596979753828">
+    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2" timestamp="1596980209129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596979753828" />
+    <state x="571" y="79" width="767" height="877" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596980209129" />
     <state x="100" y="99" width="1720" height="840" key="DiffContextDialog" timestamp="1596977482645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -283,10 +289,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="21" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596979607026" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1596979755318">
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1596980209971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596979755318" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596980209971" />
     <state x="849" y="409" width="312" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596891191727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,9 +313,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="49" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1596979335338" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1596979949962">
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1596980276180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596979949962" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596980276180" />
   </component>
 </project>
