@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Country;
+use App\User;
 use CountryService;
 
 /**
@@ -31,7 +32,15 @@ class CountryController extends Controller
      */
     public function getUsers(Request $request)
     {
-        return $this->asJson(Country::firstWhere(['name' => $request->country])->users);
+        $country = $request->country;
+
+        return $this->asJson(User::whereHas('companies.country', function ($query) use ($country) {
+            $query->where(['name' => $country]);
+        })->with(['companies' => function ($query) use ($country) {
+            $query->whereHas('country', function ($query) use ($country) {
+                $query->where(['name' => $country]);
+            });
+        }])->get());
     }
 
     /**
