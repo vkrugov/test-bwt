@@ -15,9 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group([
-    'prefix' => 'country'
+    'prefix' => 'company', 'middleware' => 'checkCountry'
 ], function () {
-    Route::get('get-companies', 'CountryController@getCompanies');
-    Route::get('get-companies-short', 'CountryController@getCompaniesShort');
-    Route::get('get-users', 'CountryController@getUsers');
+    Route::get('get-by-country', 'CompanyController@getByCountry');
+    Route::get('get-by-country-short', 'CompanyController@getByCountryShort');
+});
+
+Route::group([
+    'prefix' => 'user'
+], function () {
+    Route::get('get-by-country', 'UserController@getByCountry');
 });

@@ -8,10 +8,10 @@
 
 Для инициализации таблиц и тестовых данных следует выполнить миграции.
 
-Получить всех юзеров информацию об их компаниях и дате присоединения можно обратившись к методу CountryController@getUsers().
+Получить всех юзеров информацию об их компаниях и дате присоединения можно обратившись к методу UserController@getUsers().
 Основная логика, а именно сам запрос к БД находится в App\User::getAllByCountryName()
 
-Контроллер CountryController так же содержит 2 метода которые возвращают компании относящиеся к данной стране, связанных юзеров и дату присоединения: getCompanies() и getCompaniesShort()
+Дополнительно был создан CountryController, который содержит 2 метода возвращающие компании относящиеся к данной стране, связанных юзеров и дату присоединения: getCompanies() и getCompaniesShort()
 
 Первый возвращает полную информацию о компаниях и её юзерах используя только отношения моделей и стандартные методы поиска.
 
@@ -46,7 +46,7 @@ Params in row (JSON):
 }
 ``` 
 
-/api/country/get-users
+/api/user/get-by-country
 ```
 [
     {
@@ -98,7 +98,7 @@ Params in row (JSON):
 ]
 ```
 
- /api/country/get-companies 
+ /api/company/get-by-country
 ```
 [
     {
@@ -151,7 +151,7 @@ Params in row (JSON):
 ]
 ``` 
 
-/api/country/get-companies-short
+/api/company/get-by-country-short
 ```
 [
     {
