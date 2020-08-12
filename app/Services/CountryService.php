@@ -32,6 +32,21 @@ class CountryService
     }
 
     /**
+     * @param string $country
+     * @return Collection
+     */
+    public function getUsersByCountryName(string $country): Collection
+    {
+        return User::whereHas('companies.country', function ($query) use ($country) {
+            $query->where(['name' => $country]);
+        })->with(['companies' => function ($query) use ($country) {
+            $query->whereHas('country', function ($query) use ($country) {
+                $query->where(['name' => $country]);
+            });
+        }])->get();
+    }
+
+    /**
      * @return array
      */
     public function getCompanies(): array

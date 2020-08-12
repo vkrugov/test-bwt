@@ -34,13 +34,7 @@ class CountryController extends Controller
     {
         $country = $request->country;
 
-        return $this->asJson(User::whereHas('companies.country', function ($query) use ($country) {
-            $query->where(['name' => $country]);
-        })->with(['companies' => function ($query) use ($country) {
-            $query->whereHas('country', function ($query) use ($country) {
-                $query->where(['name' => $country]);
-            });
-        }])->get());
+        return $this->asJson(CountryService::getUsersByCountryName($country));
     }
 
     /**

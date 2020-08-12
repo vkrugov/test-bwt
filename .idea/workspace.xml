@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="fix">
-      <change beforePath="$PROJECT_DIR$/.idea/test-bwt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test-bwt.iml" afterDir="false" />
+    <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/CountryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CountryService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +137,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../abq.loc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -163,7 +164,8 @@
       <workItem from="1596980933810" duration="383000" />
       <workItem from="1597046089187" duration="10000" />
       <workItem from="1597151523497" duration="3676000" />
-      <workItem from="1597155438955" duration="1532000" />
+      <workItem from="1597155438955" duration="1644000" />
+      <workItem from="1597215981607" duration="903000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme. fix routes. fix controller">
       <created>1596977754888</created>
@@ -193,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596980772321</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix user search by country">
+      <created>1597156999983</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597156999983</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +225,8 @@
     <MESSAGE value="fix code style" />
     <MESSAGE value="change name to country" />
     <MESSAGE value="fix readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix readme" />
+    <MESSAGE value="fix user search by country" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix user search by country" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="180" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596891035839">
@@ -231,18 +241,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="746" y="358" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1597154553282" />
-    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2" timestamp="1597156532145">
+    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2" timestamp="1597156999947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597156532145" />
+    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597156999947" />
     <state x="100" y="99" width="1720" height="840" key="DiffContextDialog" timestamp="1596977482645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="99" width="1720" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596977482645" />
-    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl" timestamp="1597155199212">
+    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl" timestamp="1597216577313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597155199212" />
+    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597216577313" />
     <state width="1874" height="116" key="GridCell.Tab.0.bottom" timestamp="1597155200243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,10 +317,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="21" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597155200236" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1596980773245">
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1597157001007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596980773245" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597157001007" />
     <state x="849" y="409" width="312" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596891191727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -319,6 +329,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="748" y="339" width="413" height="353" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596977361443" />
+    <state x="806" y="293" width="562" height="450" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1597216618998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="806" y="293" width="562" height="450" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597216618998" />
     <state x="775" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596977230412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -339,10 +353,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="49" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1597155200378" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1597156343101">
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1597216688817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597156343101" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597216688817" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,7 +8,8 @@
 
 Для инициализации таблиц и тестовых данных следует выполнить миграции.
 
-Получить всех юзеров информацию об их компаниях и дате присоединения можно обратившись к методу CountryController@getUsers()
+Получить всех юзеров информацию об их компаниях и дате присоединения можно обратившись к методу CountryController@getUsers().
+Основная логика, а именно сам запрос к БД находится в App\Services\CountryService::getUsersByCountryName()
 
 Контроллер CountryController так же содержит 2 метода которые возвращают компании относящиеся к данной стране, связанных юзеров и дату присоединения: getCompanies() и getCompaniesShort()
 
@@ -49,22 +50,50 @@ Params in row (JSON):
 ```
 [
     {
+        "id": 1,
+        "name": "test",
         "email": "test1@example.com",
-        "name": "Google",
-        "connected_at": "2020-08-08 18:31:20",
-        "laravel_through_key": 1
+        "created_at": "2020-08-09T16:27:00.000000Z",
+        "companies": [
+            {
+                "id": 1,
+                "name": "Google",
+                "country_id": 1,
+                "pivot": {
+                    "user_id": 1,
+                    "company_id": 1,
+                    "connected_at": "2020-08-09 16:27:00"
+                }
+            }
+        ]
     },
     {
+        "id": 2,
+        "name": "test",
         "email": "test2@example.com",
-        "name": "Google",
-        "connected_at": "2020-08-08 18:31:20",
-        "laravel_through_key": 1
-    },
-    {
-        "email": "test2@example.com",
-        "name": "Apple",
-        "connected_at": "2020-08-08 18:31:20",
-        "laravel_through_key": 1
+        "created_at": "2020-08-09T16:27:00.000000Z",
+        "companies": [
+            {
+                "id": 1,
+                "name": "Google",
+                "country_id": 1,
+                "pivot": {
+                    "user_id": 2,
+                    "company_id": 1,
+                    "connected_at": "2020-08-09 16:27:00"
+                }
+            },
+            {
+                "id": 2,
+                "name": "Apple",
+                "country_id": 1,
+                "pivot": {
+                    "user_id": 2,
+                    "company_id": 2,
+                    "connected_at": "2020-08-09 16:27:00"
+                }
+            }
+        ]
     }
 ]
 ```
