@@ -48,7 +48,7 @@ class User extends Authenticatable
      * @param string $country
      * @return Collection
      */
-    public static function getByCountryName(string $country): Collection
+    public function getByCountryName(string $country): Collection
     {
         return static::whereHas('companies.country', function ($query) use ($country) {
             $query->where(['name' => $country]);

@@ -12,15 +12,23 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     /**
-     * CountryController constructor.
+     * @var User
      */
-    public function __construct()
+    private $user;
+
+    /**
+     * CountryController constructor.
+     * @param User $user
+     */
+    public function __construct(User $user)
     {
         $this->middleware('checkCountry', [
             'only' => [
                 'getByCountry'
             ]
         ]);
+
+        $this->user = $user;
     }
 
     /**
@@ -29,6 +37,6 @@ class UserController extends Controller
      */
     public function getByCountry(Request $request)
     {
-        return $this->asJson(User::getByCountryName($request->country));
+        return $this->asJson($this->user->getByCountryName($request->country));
     }
 }
