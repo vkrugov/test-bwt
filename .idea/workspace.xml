@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="">
+    <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="add DI to UserController">
+      <change afterPath="$PROJECT_DIR$/app/Providers/RepositoryProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/User/UserEloquent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/User/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +139,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ffnp.loc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -163,6 +168,7 @@
       <workItem from="1597151523497" duration="3676000" />
       <workItem from="1597155438955" duration="1644000" />
       <workItem from="1597215981607" duration="4403000" />
+      <workItem from="1597224929852" duration="2963000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme. fix routes. fix controller">
       <created>1596977754888</created>
@@ -220,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597219960883</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add DI to UserController">
+      <created>1597225029580</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597225029580</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,25 +260,26 @@
     <MESSAGE value="getUsersByCountryName to App\Services\CountryService" />
     <MESSAGE value="remove getUsersByCountryName(); add User::getAllByCountryName()" />
     <MESSAGE value="refactor controllers logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor controllers logic" />
+    <MESSAGE value="add DI to UserController" />
+    <option name="LAST_COMMIT_MESSAGE" value="add DI to UserController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="180" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596891035839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="555" y="180" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596891035839" />
-    <state x="693" y="277" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597218178418">
+    <state x="693" y="277" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597227216246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="693" y="277" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597218178418" />
+    <state x="693" y="277" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597227216246" />
     <state x="746" y="358" key="#xdebugger.evaluate" timestamp="1597219117757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="746" y="358" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1597219117757" />
-    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2" timestamp="1597219960835">
+    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2" timestamp="1597228151660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597219960835" />
+    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597228151660" />
     <state x="100" y="99" width="1720" height="840" key="DiffContextDialog" timestamp="1597219908618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -338,10 +352,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="21" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597220384472" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1597219962300">
+    <state x="753" y="242" width="438" height="551" key="NewPhpClassDialog" timestamp="1597227152300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597219962300" />
+    <state x="753" y="242" width="438" height="551" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597227152300" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1597225030681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597225030681" />
     <state x="849" y="409" width="312" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596891191727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -378,10 +396,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597217553935" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1597219866292">
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1597228139461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597219866292" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597228139461" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

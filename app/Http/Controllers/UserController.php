@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Repositories\User\UserRepository;
 use Illuminate\Http\Request;
 
 /**
@@ -12,15 +12,15 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     /**
-     * @var User
+     * @var UserRepository
      */
     private $user;
 
     /**
      * CountryController constructor.
-     * @param User $user
+     * @param UserRepository $user
      */
-    public function __construct(User $user)
+    public function __construct(UserRepository $user)
     {
         $this->middleware('checkCountry', [
             'only' => [
