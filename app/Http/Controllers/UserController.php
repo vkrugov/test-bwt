@@ -14,7 +14,7 @@ class UserController extends Controller
     /**
      * @var UserRepository
      */
-    private $user;
+    protected $user;
 
     /**
      * CountryController constructor.
