@@ -45,21 +45,6 @@ class User extends Authenticatable
     ];
 
     /**
-     * @param string $country
-     * @return Collection
-     */
-    public function getByCountryName(string $country): Collection
-    {
-        return static::whereHas('companies.country', function ($query) use ($country) {
-            $query->where(['name' => $country]);
-        })->with(['companies' => function ($query) use ($country) {
-            $query->whereHas('country', function ($query) use ($country) {
-                $query->where(['name' => $country]);
-            });
-        }])->get();
-    }
-
-    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function companies()
