@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3dc21a7-2cef-42a6-9300-1f54476c72d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CountryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/CountryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CountryService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +165,7 @@
       <workItem from="1597046089187" duration="10000" />
       <workItem from="1597151523497" duration="3676000" />
       <workItem from="1597155438955" duration="1644000" />
-      <workItem from="1597215981607" duration="903000" />
+      <workItem from="1597215981607" duration="1643000" />
     </task>
     <task id="LOCAL-00001" summary="fix readme. fix routes. fix controller">
       <created>1596977754888</created>
@@ -202,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597156999983</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="getUsersByCountryName to App\Services\CountryService">
+      <created>1597216989724</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597216989724</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +233,8 @@
     <MESSAGE value="change name to country" />
     <MESSAGE value="fix readme" />
     <MESSAGE value="fix user search by country" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix user search by country" />
+    <MESSAGE value="getUsersByCountryName to App\Services\CountryService" />
+    <option name="LAST_COMMIT_MESSAGE" value="getUsersByCountryName to App\Services\CountryService" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="180" width="800" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596891035839">
@@ -241,10 +249,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="746" y="358" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1597154553282" />
-    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2" timestamp="1597156999947">
+    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2" timestamp="1597216989610">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597156999947" />
+    <state x="170" y="39" width="1550" height="916" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597216989610" />
     <state x="100" y="99" width="1720" height="840" key="DiffContextDialog" timestamp="1596977482645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -317,10 +325,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="21" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597155200236" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1597157001007">
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1597216990885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597157001007" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597216990885" />
     <state x="849" y="409" width="312" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596891191727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -353,20 +361,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="901" width="769" height="49" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1597155200378" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1597216688817">
+    <state x="624" y="237" key="run.anything.popup" timestamp="1597217553935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597216688817" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/CountryController.php</url>
-          <line>34</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="624" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597217553935" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1597217531226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597217531226" />
   </component>
 </project>

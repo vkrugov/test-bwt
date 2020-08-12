@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Country;
 use App\User;
 use CountryService;
+use Illuminate\Http\Request;
+use App\Country;
 
 /**
  * Class CountryController
@@ -32,9 +32,7 @@ class CountryController extends Controller
      */
     public function getUsers(Request $request)
     {
-        $country = $request->country;
-
-        return $this->asJson(CountryService::getUsersByCountryName($country));
+        return $this->asJson(User::getAllByCountryName($request->country));
     }
 
     /**

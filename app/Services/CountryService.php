@@ -2,9 +2,9 @@
 
 namespace App\Services;
 
+use Illuminate\Database\Eloquent\Collection;
 use App\Country;
 use App\User;
-use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Class CountryService
@@ -29,21 +29,6 @@ class CountryService
     public function getCompaniesByCountry(Country $country): array
     {
         return $this->setCountry($country)->setCompanies()->getCompanies();
-    }
-
-    /**
-     * @param string $country
-     * @return Collection
-     */
-    public function getUsersByCountryName(string $country): Collection
-    {
-        return User::whereHas('companies.country', function ($query) use ($country) {
-            $query->where(['name' => $country]);
-        })->with(['companies' => function ($query) use ($country) {
-            $query->whereHas('country', function ($query) use ($country) {
-                $query->where(['name' => $country]);
-            });
-        }])->get();
     }
 
     /**

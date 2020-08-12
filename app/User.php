@@ -2,8 +2,7 @@
 
 namespace App;
 
-use Carbon\Carbon;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -44,6 +43,21 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
+
+    /**
+     * @param string $country
+     * @return Collection
+     */
+    public static function getAllByCountryName(string $country): Collection
+    {
+        return static::whereHas('companies.country', function ($query) use ($country) {
+            $query->where(['name' => $country]);
+        })->with(['companies' => function ($query) use ($country) {
+            $query->whereHas('country', function ($query) use ($country) {
+                $query->where(['name' => $country]);
+            });
+        }])->get();
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
