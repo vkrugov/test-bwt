@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CountryRequest;
 use App\Repositories\User\UserRepository;
 use Illuminate\Http\Request;
 
@@ -22,12 +23,6 @@ class UserController extends Controller
      */
     public function __construct(UserRepository $user)
     {
-        $this->middleware('checkCountry', [
-            'only' => [
-                'getByCountry'
-            ]
-        ]);
-
         $this->user = $user;
     }
 
@@ -35,7 +30,7 @@ class UserController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function getByCountry(Request $request)
+    public function getByCountry(CountryRequest $request)
     {
         return $this->asJson($this->user->getByCountryName($request->country));
     }
